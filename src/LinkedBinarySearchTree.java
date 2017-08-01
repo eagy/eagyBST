@@ -364,6 +364,10 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
         
         return (current.getElement());
     }
+    
+    /**
+     * @param element the element to be found 
+     */
     public boolean contains(T element) {
     	//TODO: Implement contains
     	
@@ -377,11 +381,11 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
     }
 
     
-    /**
+/*    *//**
      * Returns the left subtree of the root of this tree.
      *
      * @return a link to the left subtree fo the tree
-     */
+     *//*
     @Override
     public LinkedBinarySearchTree<T> getLeft()
     { 
@@ -392,11 +396,11 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
     	return temp;
     }
     
-    /**
+    *//**
      * Returns the right subtree of the root of this tree.
      *
      * @return a link to the right subtree of the tree
-     */
+     *//*
     @Override
     public LinkedBinarySearchTree<T> getRight()
     {
@@ -405,7 +409,7 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
     	temp.root = root.getRight();
     	
     	return temp;
-    }
+    }*/
     
     /**
      * Returns a reference to the specified target element if it is

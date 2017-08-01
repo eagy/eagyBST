@@ -319,8 +319,8 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>, Iterable<T>
         if (node != null)
         {
             tempList.addToRear(node.getElement());
-            inOrder(node.getLeft(), tempList);
-            inOrder(node.getRight(), tempList);
+            preOrder(node.getLeft(), tempList);
+            preOrder(node.getRight(), tempList);
         }
     }
 

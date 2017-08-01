@@ -3,6 +3,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import java.util.Iterator;
 
 public class LinkedBinarySearchTreeTest {
 	LinkedBinarySearchTree<Integer> test;
@@ -22,16 +23,6 @@ public class LinkedBinarySearchTreeTest {
 		test.addElement(1);
 		
 		assertEquals((Integer)1, test.find(1));
-	}
-
-	@Test
-	public void testLinkedBinarySearchTree() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	public void testLinkedBinarySearchTreeT() {
-		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
@@ -89,27 +80,21 @@ public class LinkedBinarySearchTreeTest {
 
 	@Test
 	public void testGetLeft() {
-		fail("Not yet implemented"); // TODO
+		test.addElement(2);
+		test.addElement(1);
+		test.addElement(3);
+		
+		assertEquals((Integer)1, test.getLeft().getRootElement());
 	}
 
 	@Test
 	public void testGetRight() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	public void testLinkedBinaryTree() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	public void testLinkedBinaryTreeT() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	public void testLinkedBinaryTreeTLinkedBinaryTreeOfTLinkedBinaryTreeOfT() {
-		fail("Not yet implemented"); // TODO
+		test.addElement(2);
+		test.addElement(1);
+		test.addElement(3);
+		
+		System.out.println(test.getRootElement());
+		assertEquals((Integer)3, test.getRight().getRootElement());
 	}
 
 	@Test
@@ -126,25 +111,6 @@ public class LinkedBinarySearchTreeTest {
 		test.addElement(1);
 		
 		assertNotNull(test.getRootNode());
-	}
-
-	@Test
-	public void testGetLeft1() {
-		test.addElement(2);
-		test.addElement(1);
-		test.addElement(3);
-		
-		assertEquals((Integer)1, test.getLeft().getRootElement());
-	}
-
-	@Test
-	public void testGetRight1() {
-		test.addElement(2);
-		test.addElement(1);
-		test.addElement(3);
-		
-		System.out.println(test.getRootElement());
-		assertEquals((Integer)3, test.getRight().getRootElement());
 	}
 
 	@Test
@@ -202,43 +168,60 @@ public class LinkedBinarySearchTreeTest {
 	}
 
 	@Test
-	public void testIterator() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
 	public void testIteratorInOrder() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	public void testInOrder() {
-		fail("Not yet implemented"); // TODO
+		test.addElement(2);
+		test.addElement(1);
+		test.addElement(4);
+		test.addElement(3);
+		test.addElement(5);
+		Iterator<Integer> it = test.iteratorInOrder();
+		
+		assertEquals((Integer)1, it.next());
+		assertEquals((Integer)2, it.next());
+		assertEquals((Integer)3, it.next());
+		assertEquals((Integer)4, it.next());
+		assertEquals((Integer)5, it.next());
 	}
 
 	@Test
 	public void testIteratorPreOrder() {
-		fail("Not yet implemented"); // TODO
+		test.addElement(2);
+		test.addElement(1);
+		test.addElement(4);
+		test.addElement(3);
+		test.addElement(5);
+		Iterator<Integer> it = test.iteratorPreOrder();
+		
+		assertEquals((Integer)2, it.next());
+		assertEquals((Integer)1, it.next());
+		assertEquals((Integer)4, it.next());
+		assertEquals((Integer)3, it.next());
+		assertEquals((Integer)5, it.next());
 	}
 
-	@Test
-	public void testPreOrder() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
+	@Test(expected=UnsupportedOperationException.class)
 	public void testIteratorPostOrder() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	public void testPostOrder() {
-		fail("Not yet implemented"); // TODO
+		test.iteratorPostOrder();
 	}
 
 	@Test
 	public void testIteratorLevelOrder() {
-		fail("Not yet implemented"); // TODO
+		test.addElement(4);
+		test.addElement(2);
+		test.addElement(6);
+		test.addElement(1);
+		test.addElement(3);
+		test.addElement(5);
+		test.addElement(7);
+		Iterator<Integer> it = test.iteratorLevelOrder();
+		
+		assertEquals((Integer)4, it.next());
+		assertEquals((Integer)2, it.next());
+		assertEquals((Integer)6, it.next());
+		assertEquals((Integer)1, it.next());
+		assertEquals((Integer)3, it.next());
+		assertEquals((Integer)5, it.next());
+		assertEquals((Integer)7, it.next());
 	}
 
 }
