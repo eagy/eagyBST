@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SER222BST" project="SER222BST" tests="34" started="34" failures="0" errors="0" ignored="0">
+  <testsuite name="ArrayUnorderedListTest" time="0.001">
+    <testcase name="testFirst" classname="ArrayUnorderedListTest" time="0.001"/>
+    <testcase name="testLast" classname="ArrayUnorderedListTest" time="0.0"/>
+    <testcase name="testSize" classname="ArrayUnorderedListTest" time="0.0"/>
+    <testcase name="testToString" classname="ArrayUnorderedListTest" time="0.0"/>
+    <testcase name="testRemoveFirst" classname="ArrayUnorderedListTest" time="0.0"/>
+    <testcase name="testAddAfter" classname="ArrayUnorderedListTest" time="0.0"/>
+    <testcase name="testAddToFront" classname="ArrayUnorderedListTest" time="0.0"/>
+    <testcase name="testContains" classname="ArrayUnorderedListTest" time="0.0"/>
+    <testcase name="testRemoveLast" classname="ArrayUnorderedListTest" time="0.0"/>
+    <testcase name="testAddToRear" classname="ArrayUnorderedListTest" time="0.0"/>
+    <testcase name="testIsEmpty" classname="ArrayUnorderedListTest" time="0.0"/>
+    <testcase name="testRemove" classname="ArrayUnorderedListTest" time="0.0"/>
+    <testcase name="testIterator" classname="ArrayUnorderedListTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="LinkedBinarySearchTreeTest" time="0.0">
+    <testcase name="testIteratorLevelOrder" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testGetRight" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testFindMax" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testFindMin" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testFind" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testSize" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testToString" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testRemoveAllOccurrences" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testAddElement" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testGetLeft" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testIteratorPostOrder" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testContains" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testGetRootElement" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testIteratorInOrder" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testGetHeight" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testGetRootNode" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testRemoveElement" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testIteratorPreOrder" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testIsEmpty" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testRemoveMax" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+    <testcase name="testRemoveMin" classname="LinkedBinarySearchTreeTest" time="0.0"/>
+  </testsuite>
+</testrun>

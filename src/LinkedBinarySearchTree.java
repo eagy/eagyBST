@@ -5,6 +5,7 @@
  * @author Lewis and Chase
  * @version 4.0
  */
+@SuppressWarnings({"unchecked","rawtypes"})
 public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
                                         implements BinarySearchTreeADT<T>
 {
@@ -309,8 +310,7 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
     @Override
     public T removeMax() throws EmptyCollectionException 
     {
-        // TODO: May need to implement.
-    	return null;
+    	throw new UnsupportedOperationException();
     }
 
     /**
@@ -324,8 +324,7 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
     @Override
     public T findMin() throws EmptyCollectionException 
     {
-        // TODO: May need to implement.
-    	return null;
+    	throw new UnsupportedOperationException();
     }
 
     /**
@@ -340,11 +339,9 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
     @Override
     public T findMax() throws EmptyCollectionException 
     {
-        // TODO: May need to implement.
-    	return null;
+    	throw new UnsupportedOperationException();
     }
 
-    // TODO: Implement find.
     /**
      * Returns a reference to the specified target element if it is
      * found in this binary tree.  Throws a ElementNotFoundException if
@@ -356,7 +353,6 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
      */
     public T find(T targetElement) throws ElementNotFoundException
     {
-    	// TODO: Implement find.
         BinaryTreeNode<T> current = findNode(targetElement, root);
         
         if (current == null)
@@ -369,15 +365,7 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
      * @param element the element to be found 
      */
     public boolean contains(T element) {
-    	//TODO: Implement contains
-    	
-    	try {
-    		find(element);
-    		return true;
-    	}
-    	catch(ElementNotFoundException e) {
-    		return false;
-    	}
+    	return findNode(element, root) != null ? true : false;
     }
 
     
@@ -389,7 +377,6 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
     @Override
     public LinkedBinarySearchTree<T> getLeft()
     { 
-        // TODO: May need to implement.
     	LinkedBinarySearchTree<T> temp = new LinkedBinarySearchTree<>();
     	temp.root = root.getLeft();
     	
@@ -404,7 +391,6 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
     @Override
     public LinkedBinarySearchTree<T> getRight()
     {
-        // TODO: May need to implement.
     	LinkedBinarySearchTree<T> temp = new LinkedBinarySearchTree<>();
     	temp.root = root.getRight();
     	
@@ -421,16 +407,20 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
     private BinaryTreeNode<T> findNode(T targetElement, 
                                         BinaryTreeNode<T> next)
     {
+
         if (next == null)
             return null;
         
         if (next.getElement().equals(targetElement))
             return next;
         
-        BinaryTreeNode<T> temp = findNode(targetElement, next.getLeft());
+        Comparable<T> elem = (Comparable<T>)targetElement;
+        BinaryTreeNode<T> temp;
         
-        if (temp == null)
-            temp = findNode(targetElement, next.getRight());
+        if(elem.compareTo(next.getElement()) < 0) 
+        	temp = findNode(targetElement, next.getLeft());
+        else
+        	temp = findNode(targetElement, next.getRight());
         
         return temp;
     }
