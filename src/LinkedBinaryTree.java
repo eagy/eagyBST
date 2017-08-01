@@ -153,8 +153,14 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>, Iterable<T>
         // TODO: Implement this.
 		 if(node == null)
 			 return 0;
+		 if(node.numChildren() == 0)
+			 return 0;
 		 
-		 return height(node.getLeft()) > height(node.getRight()) ? height(node.getLeft())+1 : height(node.getLeft())+1;
+		 int left = height(node.getLeft());
+		 int right = height(node.getRight());
+		 
+		 
+		 return (left > right ? left : right)+1;
     }
     
     /**
@@ -230,10 +236,10 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>, Iterable<T>
         // TODO: Implement this.
     	String str = "";
     	
-    	Iterator it = iterator(); 
+    	Iterator<T> it = iterator(); 
     	
     	while (it.hasNext())
-    		str += it.next();
+    		str += it.next() + " ";
     	
     	return str;
     }

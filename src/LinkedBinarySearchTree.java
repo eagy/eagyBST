@@ -364,7 +364,18 @@ public class LinkedBinarySearchTree<T> extends LinkedBinaryTree<T>
         
         return (current.getElement());
     }
-    // TODO: Implement contains.
+    public boolean contains(T element) {
+    	//TODO: Implement contains
+    	
+    	try {
+    		find(element);
+    		return true;
+    	}
+    	catch(ElementNotFoundException e) {
+    		return false;
+    	}
+    }
+
     
     /**
      * Returns the left subtree of the root of this tree.
